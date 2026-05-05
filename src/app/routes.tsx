@@ -1,39 +1,42 @@
 import { createBrowserRouter } from "react-router";
 import { Home } from "./components/Home";
+import { Phase1 } from "./components/Phase1";
 import { Phase2 } from "./components/Phase2";
 import { Phase3 } from "./components/Phase3";
 import { Phase4 } from "./components/Phase4";
 import { Phase5 } from "./components/Phase5";
+import { Phase6 } from "./components/Phase6";
 import { Phase7 } from "./components/Phase7";
+import { Phase8 } from "./components/Phase8";
+import { Phase9 } from "./components/Phase9";
+import { Phase10 } from "./components/Phase10";
+import { Phase11 } from "./components/Phase11";
+import { Phase12 } from "./components/Phase12";
+import { Phase13 } from "./components/Phase13";
+import { Phase14 } from "./components/Phase14";
+import { Phase15 } from "./components/Phase15";
+import { Phase16 } from "./components/Phase16";
+import { Phase17 } from "./components/Phase17";
 import { Report } from "./components/Report";
 
 export const router = createBrowserRouter([
-  {
-    path: "/",
-    Component: Home,
-  },
-  {
-    path: "/fase2",
-    Component: Phase2,
-  },
-  {
-    path: "/fase3",
-    Component: Phase3,
-  },
-  {
-    path: "/fase4",
-    Component: Phase4,
-  },
-  {
-    path: "/fase5",
-    Component: Phase5,
-  },
-  {
-    path: "/fase7",
-    Component: Phase7,
-  },
-  {
-    path: "/relatorio",
-    Component: Report,
-  },
+  { path: "/", Component: Home },
+  { path: "/fase1", Component: Phase1 },
+  { path: "/fase2", Component: Phase2 },
+  { path: "/fase3", Component: Phase3 },
+  { path: "/fase4", Component: Phase4 },
+  { path: "/fase5", Component: Phase5 },
+  { path: "/fase6", Component: Phase6 },
+  { path: "/fase7", Component: Phase7 },
+  { path: "/fase8", Component: Phase8 },
+  { path: "/fase9", Component: Phase9 },
+  { path: "/fase10", Component: Phase10 },
+  { path: "/fase11", Component: Phase11 },
+  { path: "/fase12", Component: Phase12 },
+  { path: "/fase13", Component: Phase13 },
+  { path: "/fase14", Component: Phase14 },
+  { path: "/fase15", Component: Phase15 },
+  { path: "/fase16", Component: Phase16 },
+  { path: "/fase17", Component: Phase17 },
+  { path: "/relatorio", Component: Report },
 ]);

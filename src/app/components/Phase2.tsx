@@ -8,9 +8,9 @@ import img2B from "../../imports/alf-pt1_2B.png";
 import img2C from "../../imports/alf-pt1_2C.png";
 
 const exercises = [
-  { image: img2A, answer: "CAMISA" },
-  { image: img2B, answer: "CALÇA" },
-  { image: img2C, answer: "SAPATO" },
+  { image: img2A, answer: "CAMISETA" },
+  { image: img2B, answer: "CHINELO" },
+  { image: img2C, answer: "VESTIDO" },
 ];
 
 const alphabet = [
