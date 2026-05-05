@@ -101,18 +101,18 @@ export function Phase2() {
         </div>
 
         {/* Teclado */}
-        <div className="bg-gradient-to-b from-gray-100 to-gray-200 rounded-3xl shadow-2xl p-8">
-          <div className="space-y-2 mb-6">
+        <div className="bg-gradient-to-b from-gray-700 to-gray-900 rounded-3xl shadow-2xl p-8 max-w-4xl mx-auto">
+          <div className="space-y-3 mb-8">
             {keyboardRows.map((row, idx) => (
-              <div key={idx} className={`flex gap-2 justify-center ${idx === 1 ? 'ml-8' : idx === 2 ? 'ml-16' : ''}`}>
+              <div key={idx} className={`flex gap-3 justify-center ${idx === 1 ? 'pl-12' : idx === 2 ? 'pl-20' : ''}`}>
                 {row.map((letter) => (
-                  <Button
+                  <button
                     key={letter}
                     onClick={() => handleLetterClick(letter)}
-                    className="w-16 h-16 text-3xl font-bold bg-white hover:bg-yellow-100 text-gray-800 rounded-lg shadow-md border-2 border-gray-300 transform transition-all hover:shadow-lg active:scale-95"
+                    className="w-20 h-20 text-3xl font-bold bg-gradient-to-b from-gray-200 to-gray-100 hover:from-gray-300 hover:to-gray-200 text-gray-900 rounded-lg shadow-lg border-b-4 border-gray-400 transform transition-all hover:shadow-xl active:shadow-inner active:translate-y-1 active:border-b-2"
                   >
                     {letter}
-                  </Button>
+                  </button>
                 ))}
               </div>
             ))}
