@@ -13,10 +13,12 @@ const exercises = [
   { image: img2C, answer: "VESTIDO" },
 ];
 
-const alphabet = [
-  "A", "B", "C", "D", "E", "F", "G", "H", "I",
-  "J", "K", "L", "M", "N", "O", "P", "Q", "R",
-  "S", "T", "U", "V", "W", "X", "Y", "Z"
+const keyboardRows = [
+  ["A", "B", "C", "D", "E", "F"],
+  ["G", "H", "I", "J", "K", "L"],
+  ["M", "N", "O", "P", "Q", "R"],
+  ["S", "T", "U", "V", "W", "X"],
+  ["Y", "Z"]
 ];
 
 export function Phase2() {
@@ -102,15 +104,19 @@ export function Phase2() {
 
         {/* Teclado */}
         <div className="bg-white rounded-3xl shadow-2xl p-6">
-          <div className="grid grid-cols-9 gap-2 mb-4">
-            {alphabet.map((letter) => (
-              <Button
-                key={letter}
-                onClick={() => handleLetterClick(letter)}
-                className="aspect-square text-xl font-bold bg-gradient-to-br from-yellow-300 to-yellow-400 hover:from-yellow-400 hover:to-yellow-500 text-purple-800 rounded-xl shadow-md transform transition-all hover:scale-110"
-              >
-                {letter}
-              </Button>
+          <div className="space-y-3 mb-4">
+            {keyboardRows.map((row, idx) => (
+              <div key={idx} className="flex gap-3 justify-center">
+                {row.map((letter) => (
+                  <Button
+                    key={letter}
+                    onClick={() => handleLetterClick(letter)}
+                    className="w-14 h-14 text-xl font-bold bg-gradient-to-br from-yellow-300 to-yellow-400 hover:from-yellow-400 hover:to-yellow-500 text-purple-800 rounded-lg shadow-md transform transition-all hover:scale-105"
+                  >
+                    {letter}
+                  </Button>
+                ))}
+              </div>
             ))}
           </div>
 

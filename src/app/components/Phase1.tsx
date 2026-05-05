@@ -4,10 +4,12 @@ import { useReport } from "../contexts/ReportContext";
 import { Button } from "./ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-const alphabet = [
-  "A", "B", "C", "D", "E", "F", "G", "H", "I",
-  "J", "K", "L", "M", "N", "O", "P", "Q", "R",
-  "S", "T", "U", "V", "W", "X", "Y", "Z", "Ç"
+const keyboardRows = [
+  ["A", "B", "C", "D", "E", "F"],
+  ["G", "H", "I", "J", "K", "L"],
+  ["M", "N", "O", "P", "Q", "R"],
+  ["S", "T", "U", "V", "W", "X"],
+  ["Y", "Z", "Ç"]
 ];
 
 export function Phase1() {
@@ -72,15 +74,19 @@ export function Phase1() {
         </div>
 
         <div className="bg-white rounded-3xl shadow-2xl p-6">
-          <div className="grid grid-cols-9 gap-2 mb-4">
-            {alphabet.map(l => (
-              <Button
-                key={l}
-                onClick={() => handleLetter(l)}
-                className="aspect-square text-lg font-bold bg-gradient-to-br from-sky-300 to-blue-400 hover:from-sky-400 hover:to-blue-500 text-white rounded-xl shadow-md transform transition-all hover:scale-110"
-              >
-                {l}
-              </Button>
+          <div className="space-y-3 mb-4">
+            {keyboardRows.map((row, idx) => (
+              <div key={idx} className="flex gap-3 justify-center">
+                {row.map(l => (
+                  <Button
+                    key={l}
+                    onClick={() => handleLetter(l)}
+                    className="w-14 h-14 text-xl font-bold bg-gradient-to-br from-sky-300 to-blue-400 hover:from-sky-400 hover:to-blue-500 text-white rounded-lg shadow-md transform transition-all hover:scale-105"
+                  >
+                    {l}
+                  </Button>
+                ))}
+              </div>
             ))}
           </div>
           <div className="flex gap-3 justify-center flex-wrap">
