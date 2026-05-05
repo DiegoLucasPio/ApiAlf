@@ -14,11 +14,9 @@ const exercises = [
 ];
 
 const keyboardRows = [
-  ["A", "B", "C", "D", "E", "F"],
-  ["G", "H", "I", "J", "K", "L"],
-  ["M", "N", "O", "P", "Q", "R"],
-  ["S", "T", "U", "V", "W", "X"],
-  ["Y", "Z"]
+  ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
+  ["A", "S", "D", "F", "G", "H", "J", "K", "L"],
+  ["Z", "X", "C", "V", "B", "N", "M"]
 ];
 
 export function Phase2() {
@@ -103,15 +101,15 @@ export function Phase2() {
         </div>
 
         {/* Teclado */}
-        <div className="bg-white rounded-3xl shadow-2xl p-8">
-          <div className="space-y-4 mb-6 max-w-2xl mx-auto">
+        <div className="bg-gradient-to-b from-gray-100 to-gray-200 rounded-3xl shadow-2xl p-8">
+          <div className="space-y-2 mb-6">
             {keyboardRows.map((row, idx) => (
-              <div key={idx} className="flex gap-4 justify-center">
+              <div key={idx} className={`flex gap-2 justify-center ${idx === 1 ? 'ml-8' : idx === 2 ? 'ml-16' : ''}`}>
                 {row.map((letter) => (
                   <Button
                     key={letter}
                     onClick={() => handleLetterClick(letter)}
-                    className="w-24 h-24 text-4xl font-bold bg-gradient-to-br from-yellow-300 to-yellow-400 hover:from-yellow-400 hover:to-yellow-500 text-purple-800 rounded-xl shadow-lg transform transition-all hover:scale-110 active:scale-95"
+                    className="w-16 h-16 text-3xl font-bold bg-white hover:bg-yellow-100 text-gray-800 rounded-lg shadow-md border-2 border-gray-300 transform transition-all hover:shadow-lg active:scale-95"
                   >
                     {letter}
                   </Button>
