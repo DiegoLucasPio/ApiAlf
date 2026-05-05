@@ -73,15 +73,15 @@ export function Phase1() {
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl shadow-2xl p-6">
-          <div className="space-y-3 mb-4">
+        <div className="bg-white rounded-3xl shadow-2xl p-8">
+          <div className="space-y-4 mb-6 max-w-2xl mx-auto">
             {keyboardRows.map((row, idx) => (
-              <div key={idx} className="flex gap-3 justify-center">
+              <div key={idx} className="flex gap-4 justify-center">
                 {row.map(l => (
                   <Button
                     key={l}
                     onClick={() => handleLetter(l)}
-                    className="w-14 h-14 text-xl font-bold bg-gradient-to-br from-sky-300 to-blue-400 hover:from-sky-400 hover:to-blue-500 text-white rounded-lg shadow-md transform transition-all hover:scale-105"
+                    className="w-24 h-24 text-4xl font-bold bg-gradient-to-br from-sky-300 to-blue-400 hover:from-sky-400 hover:to-blue-500 text-white rounded-xl shadow-lg transform transition-all hover:scale-110 active:scale-95"
                   >
                     {l}
                   </Button>

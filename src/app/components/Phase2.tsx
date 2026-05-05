@@ -103,15 +103,15 @@ export function Phase2() {
         </div>
 
         {/* Teclado */}
-        <div className="bg-white rounded-3xl shadow-2xl p-6">
-          <div className="space-y-3 mb-4">
+        <div className="bg-white rounded-3xl shadow-2xl p-8">
+          <div className="space-y-4 mb-6 max-w-2xl mx-auto">
             {keyboardRows.map((row, idx) => (
-              <div key={idx} className="flex gap-3 justify-center">
+              <div key={idx} className="flex gap-4 justify-center">
                 {row.map((letter) => (
                   <Button
                     key={letter}
                     onClick={() => handleLetterClick(letter)}
-                    className="w-14 h-14 text-xl font-bold bg-gradient-to-br from-yellow-300 to-yellow-400 hover:from-yellow-400 hover:to-yellow-500 text-purple-800 rounded-lg shadow-md transform transition-all hover:scale-105"
+                    className="w-24 h-24 text-4xl font-bold bg-gradient-to-br from-yellow-300 to-yellow-400 hover:from-yellow-400 hover:to-yellow-500 text-purple-800 rounded-xl shadow-lg transform transition-all hover:scale-110 active:scale-95"
                   >
                     {letter}
                   </Button>
